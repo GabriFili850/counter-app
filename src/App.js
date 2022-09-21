@@ -9,6 +9,20 @@ export default function App() {
     <div className="App">
       <h1>This is a Counter</h1>
       <p>{counter}</p>
+      <button
+        onClick={() => {
+          setCounter(counter + 1);
+        }}
+      >
+        Increase
+      </button>
+      <button
+        onClick={() => {
+          setCounter(counter - 1);
+        }}
+      >
+        Decrease
+      </button>
     </div>
   );
 }
