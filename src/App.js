@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Page } from "../components/Page";
-import { IncreaseButton } from "../components/IncreaseButton";
-import { DecreaseButton } from "../components//DecreaseButton";
-import { Title } from "../components/Title";
+import { Page } from "./components/Page";
+import { IncreaseButton } from "./components/IncreaseButton";
+import { DecreaseButton } from "./components//DecreaseButton";
+import { Title } from "./components/Title";
 
 const App = () => {
   const [counter, setCounter] = useState(0);
