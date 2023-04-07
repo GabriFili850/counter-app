@@ -1,26 +1,20 @@
-import React from "react";
-import { Page, IncreaseButton, DecreaseButton, Title } from "./styles.js";
-
-const { useState } = React;
+import React, { useState } from "react";
+import { Page } from "../components/Page";
+import { IncreaseButton } from "../components/IncreaseButton";
+import { DecreaseButton } from "../components//DecreaseButton";
+import { Title } from "../components/Title";
 
 const App = () => {
   const [counter, setCounter] = useState(0);
+
   return (
     <Page>
-      <Title>This is a Counter</Title>
+      <Title>Counter React App</Title>
       <p>{counter}</p>
-      <IncreaseButton
-        onClick={() => {
-          setCounter(counter + 1);
-        }}
-      >
+      <IncreaseButton onClick={() => setCounter(counter + 1)}>
         Increase
       </IncreaseButton>
-      <DecreaseButton
-        onClick={() => {
-          setCounter(counter - 1);
-        }}
-      >
+      <DecreaseButton onClick={() => setCounter(counter - 1)}>
         Decrease
       </DecreaseButton>
     </Page>
