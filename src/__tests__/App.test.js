@@ -24,4 +24,12 @@ describe("App", () => {
     fireEvent.click(decreaseButton);
     expect(counterElement).toHaveTextContent("0");
   });
+
+  test("does not allow counter to go negative", () => {
+    const { getByText } = render(<App />);
+    const decreaseButton = getByText(/Decrease/i);
+    const counterElement = getByText(/0/i);
+    fireEvent.click(decreaseButton);
+    expect(counterElement).toHaveTextContent("0");
+  });
 });
