@@ -7,6 +7,12 @@ import { Title } from "./components/Title";
 const App = () => {
   const [counter, setCounter] = useState(0);
 
+  const decreaseCounter = () => {
+    if (counter > 0) {
+      setCounter(counter - 1);
+    }
+  };
+
   return (
     <Page role='main'>
       <Title title='This is a Counter'>This is a Counter</Title>
@@ -23,7 +29,7 @@ const App = () => {
           Increase
         </IncreaseButton>
         <DecreaseButton
-          onClick={() => setCounter(counter - 1)}
+          onClick={decreaseCounter}
           aria-label='Decrease counter'
           type='button'
           title='Click to decrease the counter'
