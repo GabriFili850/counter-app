@@ -16,4 +16,12 @@ describe("App", () => {
     fireEvent.click(increaseButton);
     expect(counterElement).toHaveTextContent("1");
   });
+
+  test("decrements counter on DecreaseButton click", () => {
+    const { getByText } = render(<App />);
+    const decreaseButton = getByText(/Decrease/i);
+    const counterElement = getByText(/0/i);
+    fireEvent.click(decreaseButton);
+    expect(counterElement).toHaveTextContent("0");
+  });
 });
