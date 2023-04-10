@@ -8,4 +8,12 @@ describe("App", () => {
     const counterElement = getByText(/0/i);
     expect(counterElement).toBeInTheDocument();
   });
+
+  test("increments counter on IncreaseButton click", () => {
+    const { getByText } = render(<App />);
+    const increaseButton = getByText(/Increase/i);
+    const counterElement = getByText(/0/i);
+    fireEvent.click(increaseButton);
+    expect(counterElement).toHaveTextContent("1");
+  });
 });
